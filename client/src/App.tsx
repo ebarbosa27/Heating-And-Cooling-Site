@@ -1,10 +1,11 @@
+import { Route, Routes } from "react-router";
 import "./App.css";
 
 function App() {
   return (
-    <div id="app">
-      <h1>Header</h1>
-    </div>
+    <Routes>
+      <Route index element={<div>Header</div>} />
+    </Routes>
   );
 }
 
