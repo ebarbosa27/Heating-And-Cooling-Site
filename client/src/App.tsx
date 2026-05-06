@@ -1,10 +1,13 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
+import Layout from "./Layout/Layout";
 
 function App() {
   return (
     <Routes>
-      <Route index element={<div>Header</div>} />
+      <Route element={<Layout />}>
+        <Route index element={<div>Header</div>} />
+      </Route>
     </Routes>
   );
 }
