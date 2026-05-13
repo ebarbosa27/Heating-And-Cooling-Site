@@ -3,10 +3,18 @@
 * {
   box-sizing: border-box;
 
-  --background-color: white;
-  --text-color: #191919;
+  --background-color: #e6e6e6;
+  --text-color: #39393a;
 
-  --surface-color: #c3baaa;
+  --surface-color: #484538;
+
+  --primary-color: #fb120e;
+  --secondary-color: #3772ff;
+}
+
+html {
+  min-width: 360px;
+  min-height: 360px;
 }
 
 body {

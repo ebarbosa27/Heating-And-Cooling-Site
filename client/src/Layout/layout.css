@@ -20,6 +20,7 @@
   margin: 0;
   padding: 0.6rem 1rem;
 
+  color: var(--surface-color);
   font-weight: 500;
   font-size: 78px;
   letter-spacing: -3px;
@@ -43,11 +44,11 @@
 }
 
 #navbar .leftNav h1 .headerRowsContainer .headerRow:nth-child(1) {
-  color: #e52437;
+  color: var(--primary-color);
 }
 
 #navbar .leftNav h1 .headerRowsContainer .headerRow:nth-child(2) {
-  color: #2f92ee;
+  color: var(--secondary-color);
 }
 
 #navbar .leftNav h1 .headerBackground {
@@ -62,7 +63,7 @@
 #navbar .rightNav {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 
   padding: 1.5rem 2rem;
   border-radius: 1rem;
@@ -70,14 +71,17 @@
 
 #navbar .rightNav a {
   text-decoration: unset;
+  text-align: center;
+  white-space: nowrap;
 
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--surface-color);
   padding: 0.5rem 1.2rem;
   border-radius: 0.5rem;
 }
 
+#navbar .rightNav a:nth-child(1),
 #navbar .rightNav a:nth-child(2) {
   border: 3px solid var(--surface-color);
   color: var(--surface-color);
@@ -92,4 +96,37 @@
 
 #navbar .rightNav a:hover {
   text-decoration: underline;
+}
+
+@media (width < 900px) {
+  #navbar {
+    flex-direction: column;
+  }
+
+  #navbar .leftNav {
+    padding: 0;
+  }
+
+  #navbar .leftNav * {
+    font-size: 90%;
+  }
+
+  #navbar .rightNav {
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.2rem;
+  }
+
+  #navbar .rightNav a {
+    flex: auto;
+    gap: 0;
+    font-size: 18px;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+@media (width < 500px) {
+  #navbar .rightNav {
+    flex-direction: column;
+  }
 }

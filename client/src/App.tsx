@@ -6,7 +6,7 @@ function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route index element={<div>Header</div>} />
+        <Route index element={<div></div>} />
       </Route>
     </Routes>
   );
