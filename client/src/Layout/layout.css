@@ -81,14 +81,13 @@
   border-radius: 0.5rem;
 }
 
-#navbar .rightNav a:nth-child(1),
-#navbar .rightNav a:nth-child(2) {
+#navbar .rightNav a {
   border: 3px solid var(--surface-color);
   color: var(--surface-color);
   text-shadow: 1px 1px hsl(0, 0%, 60%);
 }
 
-#navbar .rightNav a:nth-child(3) {
+#navbar .rightNav a:last-child {
   background-color: var(--surface-color);
   border: 3px solid var(--surface-color);
   color: var(--background-color);
