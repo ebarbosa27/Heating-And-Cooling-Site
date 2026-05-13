@@ -1,0 +1,20 @@
+services:
+  web:
+    build: ./client
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./client:/web
+      - /web/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
+  api:
+    build: ./server
+    ports:
+      - "5174:5174"
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
